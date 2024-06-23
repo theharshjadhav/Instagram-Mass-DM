@@ -14,6 +14,9 @@ df = pd.read_excel('FinalLeadList.xlsx')
 load_dotenv()
 count = 0
 
+service = Service("chromedriver.exe")
+driver = webdriver.Chrome(service=service)
+
 # Get username and password from environment variables
 INSTAGRAM_USERNAME = os.getenv("INSTAGRAM_USERNAME")
 INSTAGRAM_PASSWORD = os.getenv("INSTAGRAM_PASSWORD")
